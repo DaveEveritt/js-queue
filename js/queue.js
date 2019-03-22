@@ -24,7 +24,6 @@ const createQueue = () => {
 }
 
 const q = createQueue();
-// console.log(q.isEmpty());
 
 /* =================================
    Optional: queue items from form
@@ -39,7 +38,7 @@ const makeList = (el, index) => {
   showQueue.innerHTML += `<input type="checkbox" id="item${index}" name="choices" value="item${index}"><label for="item${index}">${index}: ${el}</label> <span data-choice="item${index}"> x </span><br>`;
 }
 
-const popItem = (e) => {
+const popItem = () => {
   q.dequeue();
   redrawList();
 }
@@ -60,11 +59,11 @@ const addItem = (e) => {
   q.enqueue(queueEls[0].value);
   queueEls[0].value = '';
   redrawList();
-  e.preventDefault(e);
+  e.preventDefault();
 }
 setQueue.addEventListener('submit', addItem);
 
-// toggle highlight selected item
+// (trivial) toggle highlight on clicking X
 const showItems = (e) => {
   e.addEventListener("click", () => {
     e.classList.toggle("selected");
