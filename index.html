@@ -4,9 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JavaScript queue</title>
+  <style>
+    body {font-family: "Andale mono", monospace;}
+    form {padding: 0.5em;}
+    .highlight {background-color: #66ff66;}
+    .selected {color: #ff6666;}
+    form::selection, input::selection, label::selection, span::selection {background: transparent;}
+  </style>
 </head>
 <body>
-  <form id="showlist"></form>
+
+  <form id="showQueue"></form>
+  <!-- <button id="popQueue">dequeue</button> -->
+
+  <form id="setQueue">
+    <input type="text">
+  </form>
+
   <p>Adapted from <a href="https://egghead.io/lessons/javascript-queue-data-structure-in-javascript">Queue Data Structure in JavaScript</a></p>
 
   <script src="js/queue.js"></script>
