@@ -2,6 +2,7 @@
 body, input, button {font: 1.25rem "Andale mono", monospace; }
 button {margin: 0.5rem 0;}
 p {font-size: 1rem;}
+::placeholder {color: silver;}
 /* these are for the hilite */
 .highlight {background-color: #dede66;}
 .selected {color: #ff3333;}
