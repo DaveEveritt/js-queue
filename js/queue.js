@@ -35,7 +35,7 @@ const queueEls = setQueue.elements;
 const getItems = () => document.querySelectorAll('[data-choice^="item"]');
 
 const makeList = (el, index) => {
-  showQueue.innerHTML += `<input type="checkbox" id="item${index}" name="choices" value="item${index}"><label for="item${index}">${index}: ${el}</label> <span data-choice="item${index}"> x </span><br>`;
+  showQueue.innerHTML += `<input type="checkbox" id="item${index}" name="choices" value="item${index}"><label for="item${index}">${index}: ${el}</label> <span data-choice="item${index}"> X </span><br>`;
 }
 
 const popItem = () => {
